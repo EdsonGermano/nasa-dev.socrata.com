@@ -9,9 +9,8 @@ $(document).ready(function(){
     $("#foundry-docs").html("<p>No parameters passed!</p>");
     return;
   }
-  console.log(components);
-  var domain = components[2];
-  var uid = components[3];
+  var domain = components[1];
+  var uid = components[2];
 
   // Fetch branding details
   $.getJSON("https://" + domain + "/api/configurations.json?type=site_theme&defaultOnly=true&merge=true")
