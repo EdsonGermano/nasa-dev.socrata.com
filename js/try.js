@@ -1,7 +1,7 @@
 // LiveDocs
 var setup_livedocs = function() {
   $.when(
-      $.ajax("nasa-dev.socrata.com/foundry/tryit.mst")
+      $.ajax("/nasa-dev.socrata.com/foundry/tryit.mst")
   ).done(function(template) {
     $("a.tryit").each(function(idx, element) {
       var target = $(element).attr("href");
