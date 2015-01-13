@@ -9,6 +9,7 @@ $(document).ready(function(){
     $("#foundry-docs").html("<p>No parameters passed!</p>");
     return;
   }
+  console.log(components);
   var domain = components[2];
   var uid = components[3];
 
