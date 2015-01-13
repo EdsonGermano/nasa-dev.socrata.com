@@ -6,7 +6,7 @@ splash_homepage: false
 subsite: dev
 title: NASA Developers
 icon: fa fa-code
-github_repo: https://github.com/socrata/dev.socrata.com
+github_repo: https://github.com/socrata/nasa-dev.socrata.com
 contribute: /contributing.html
 
 local_js:
