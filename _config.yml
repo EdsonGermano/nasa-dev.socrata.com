@@ -2,6 +2,7 @@ destination: public
 exclude: [Makefile, Gemfile, Gemfile.lock, .rvmrc, public, sample-code]
 splash: false
 splash_homepage: false
+root: /nasa-dev.socrata.com
 
 subsite: dev
 title: NASA Developers
