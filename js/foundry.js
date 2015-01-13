@@ -46,7 +46,7 @@ $(document).ready(function(){
         console.log("No header logo configuration provided for this domain.");
       }
 
-      $.ajax("{{ site.root }}/foundry/branding.mst")
+      $.ajax("/branding.mst")
         .done(function(template) {
           $('#branding').html(Mustache.render(template, {
             org_name: org_name,
@@ -95,8 +95,8 @@ $(document).ready(function(){
 
     //  Load our docs from our metadata
     $.when(
-      $.ajax("{{ site.root }}/foundry/template.mst"),
-      $.ajax("{{ site.root }}/foundry/tryit.mst")
+      $.ajax("/template.mst"),
+      $.ajax("/tryit.mst")
     ).done(function(template, tryit) {
       $('#foundry-docs').html(Mustache.render(template[0], {
         domain: domain,
