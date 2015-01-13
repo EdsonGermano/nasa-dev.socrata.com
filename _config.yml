@@ -13,7 +13,6 @@ contribute: /contributing.html
 local_js:
   - /js/purl.js
   - /js/try.js
-  - /js/snufflupadata.js
   - /js/github.js
 
 gems:
