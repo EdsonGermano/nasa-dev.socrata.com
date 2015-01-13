@@ -5,7 +5,7 @@ $(document).ready(function(){
 
   // Split up our hash components
   var components = window.location.hash.split("/");
-  if(components.length != 4) {
+  if(components.length != 3) {
     $("#foundry-docs").html("<p>No parameters passed!</p>");
     return;
   }
