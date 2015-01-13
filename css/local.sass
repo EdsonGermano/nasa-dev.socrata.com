@@ -362,7 +362,6 @@ p, li
 
 #foundry-docs
   $datatypes: "text" #0074D9, "html" #0074D9, "url" #AAAAAA, "email" #AAAAAA,  "number" #39CCCC, "money" #39CCCC, "percent" #39CCCC, "location" #3D9970, "calendar_date" #FF851B, "date" #FF851B, "deprecated" #AAAAAA, "checkbox" #AAAAAA, "drop_down_list" #AAAAAA, "flag" #AAAAAA, "stars" #AAAAAA, "photo" #B10DC9, "document" #B10DC9, "phone" #AAAAAA
-
   .getting-started
     width: 67%
 
@@ -474,3 +473,109 @@ p, li
     white-space: nowrap
     overflow: hidden
     text-overflow: ellipsis
+
+// Custom NASA styling
+
+$header-image-height: 80px !default
+$header-social-link-color: #7a7a7a !default
+$header-text-color: #7a7a7a !default
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,400,100,300,700)
+
+*
+  font-family: 'Roboto', Helvetica, Arial, sans-serif
+
+body
+  background: url('https://nasa.demo.socrata.com/api/assets/AE2C193C-16A1-4308-8F92-B9486446DCBD')
+  background-size: cover
+  background-attachment: fixed
+
+a
+  color: #fff
+
+a:hover
+  color: #fff
+  text-decoration: underline
+
+h1, h2, h3, h4, h5, h6
+  color: #fff
+  margin: 0
+
+body
+  color: #ccc
+
+.panel, .well, .well a, .panel a
+  color: #000
+
+h1
+  font-family: 'Roboto', Helvetica, Arial, sans-serif
+  font-size: 50px
+  font-weight: 200
+
+h3
+  font-size: 14px
+  line-height: 1.4em
+  font-weight: bold
+
+.content
+  margin:
+    left: auto
+    right: auto
+  max-width: 1170px
+  padding:
+    top: 0px
+    bottom: 40px
+    right: 15px
+    left: 15px
+
+.loading
+  margin: 0
+
+.nasa-container
+  background: rgba(0, 0, 0, 0.6)
+  padding: 0 20px
+
+header, #header
+  color: #fff
+  z-index: 100
+  .header-logo
+    max-height: 70px
+    margin: 20px
+  #welcome-message
+    text-align: center
+    margin: 30px
+    h1
+      color: #fff
+      margin: 0
+  .header-title
+    display: inline-block
+    height: $header-image-height
+  .nav
+    background: rgba(0, 0, 0, 0.6)
+    overflow: hidden
+    border-top-right-radius: 3px
+    border-top-left-radius: 3px
+    ul
+      float: right
+      margin: 10px
+      li
+        display: inline-block
+        margin: 20px
+        text-align: center
+        font-size: 15px
+
+footer
+  .site-footer-nav-left
+    float: left
+  .site-footer-nav-right
+    float: right
+  ul
+    list-style: none
+    padding: 0
+    li
+      color: #fff
+      display: inline-block
+      line-height: 2em
+      font-size: 14px
+    li:not(:first-of-type)
+      margin-left: 30px

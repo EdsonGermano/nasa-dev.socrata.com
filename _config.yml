@@ -3,15 +3,13 @@ exclude: [Makefile, Gemfile, Gemfile.lock, .rvmrc, public, sample-code]
 splash: false
 splash_homepage: false
 
-ga_tracking_code: "UA-9046230-3"
-
 subsite: dev
-title: SODA Developers
+title: NASA Developers
 icon: fa fa-code
 github_repo: https://github.com/socrata/dev.socrata.com
 contribute: /contributing.html
 
-local_js: 
+local_js:
   - //cdnjs.cloudflare.com/ajax/libs/mustache.js/0.8.1/mustache.min.js
   - /js/purl.js
   - /js/try.js
