@@ -5,12 +5,12 @@ $(document).ready(function(){
 
   // Split up our hash components
   var components = window.location.hash.split("/");
-  if(components.length != 3) {
+  if(components.length != 4) {
     $("#foundry-docs").html("<p>No parameters passed!</p>");
     return;
   }
-  var domain = components[1];
-  var uid = components[2];
+  var domain = components[2];
+  var uid = components[3];
 
   // Fetch branding details
   $.getJSON("https://" + domain + "/api/configurations.json?type=site_theme&defaultOnly=true&merge=true")
@@ -64,7 +64,7 @@ $(document).ready(function(){
           $("#branding").show();
         })
         .fail(function(xhr) {
-          console.log("An error occurred loading the branding template:" + xhr); 
+          console.log("An error occurred loading the branding template:" + xhr);
         });
     })
     .fail(function(xhr) {
