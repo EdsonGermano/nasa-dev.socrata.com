@@ -1,7 +1,7 @@
 // LiveDocs
 var setup_livedocs = function() {
   $.when(
-      $.ajax("/foundry/tryit.mst")
+      $.ajax("nasa-dev.socrata.com/foundry/tryit.mst")
   ).done(function(template) {
     $("a.tryit").each(function(idx, element) {
       var target = $(element).attr("href");
@@ -71,7 +71,7 @@ var setup_livedocs = function() {
           alert("Something went wrong with your query... Please try again later.");
         });
       });
-      $(element).replaceWith(content); 
+      $(element).replaceWith(content);
     });
   });
 };
