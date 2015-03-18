@@ -64,6 +64,10 @@
 
 <p>Once you have an app token, you can include it with your request either by using the <code>X-App-Token</code> HTTP header, or by passing it via the <code>$$app_token</code> parameter on your URL.</p>
 
+<div class="well">
+  Learn more about <a href="/docs/app-tokens.html">App Tokens &amp; Throttling</a>.
+</div>
+
 <h2>Fields</h2>
 
 <p>Each column in <a href="http://{{domain}}/d/{{metadata.id}}">the dataset</a> is represented by a single <code>field</code> in its SODA API. Using <a href="/docs/filters.html">filters</a> and <a href="/docs/queries.html">SoQL queries</a>, you can search for records, limit your results, and change the way the data is output. For example, you could filter this dataset by its <code>{{metadata.columns.0.fieldName}}</code> field using a query like the following:</p>
@@ -73,6 +77,15 @@
 {{/metadata.columns.0.filter_url}}
 
 <p>For richer filtering, you can combine filters together by stacking parameters on your URL or by using <a href="/docs/queries.html">SoQL</a> queries. Learn more about about each of the fields in this dataset by clicking the headers below, or read more about the SODA API using the navigation at the top of the page.</p>
+
+<div class="well">
+  <p>Learn more about:</p>
+  <ul>
+    <li><a href="/docs/filters.html">Simple Filters</a></li>
+    <li><a href="/docs/queries.html">SoQL Queries</a></li>
+    <li><a href="/docs/paging.html">Paging Through Data</a></li>
+  </ul>
+</div>
 
 <ul class="fields panel-group" id="accordion">
   {{#metadata.columns}}
