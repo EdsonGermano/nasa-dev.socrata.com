@@ -36,7 +36,7 @@
 
   <p>All communication with the API is done through HTTPS, and errors are communicated through HTTP response codes. Available response types include <code>JSON</code>, <code>XML</code>, and <code>CSV</code>, which are selectable by the "extension" (<code>.json</code>, etc.) on the API endpoint or through content-negotiation with HTTP <code>Accepts</code> headers.</p>
 
-  <p>Following <a href="http://en.wikipedia.org/wiki/Representational_state_transfer">REST</a>-ful paradigms, we return standard <a href="/docs/response-codes.html">HTTP Status Codes</a> to denote success or failure. For example, a successful request will get a <code>200 OK</code>, while a bad query will get a <code>400 Bad Request</code>. Errors are also accompanied by an <a href="/docs/response-codes.html">error response</a> including human-readble error message.</p>
+  <p>Following <a href="http://en.wikipedia.org/wiki/Representational_state_transfer">REST</a>-ful paradigms, we return standard <a href="http://dev.socrata.com/docs/response-codes.html">HTTP Status Codes</a> to denote success or failure. For example, a successful request will get a <code>200 OK</code>, while a bad query will get a <code>400 Bad Request</code>. Errors are also accompanied by an <a href="http://dev.socrata.com/docs/response-codes.html">error response</a> including human-readble error message.</p>
 
   <p>This documentation also includes inline, runable examples. Click on any link that contains a <code><i class="fa fa-fw fa-cog" style="color: #c7254e"></i> gear symbol</code> next to it to run that example live against the <code>{{metadata.name}}</code> API. If you just want to grab the API endpoint and go, you'll find it below.</p>
 
@@ -50,40 +50,40 @@
 <div class="well">
   <p>Learn more about:</p>
   <ul>
-    <li><a href="/consumers/getting-started.html">Getting started with the SODA Consumer API</a></li>
-    <li><a href="/docs/formats/index.html">Output formats and content negotiation</a></li>
-    <li><a href="/docs/response-codes.html">Response codes &amp; error messages</a></li>
+    <li><a href="http://dev.socrata.com/consumers/getting-started.html">Getting started with the SODA Consumer API</a></li>
+    <li><a href="http://dev.socrata.com/docs/formats/index.html">Output formats and content negotiation</a></li>
+    <li><a href="http://dev.socrata.com/docs/response-codes.html">Response codes &amp; error messages</a></li>
   </ul>
 </div>
 
 <h2>App Tokens</h2>
 
-<p>All requests should include an <a href="/docs/app-tokens.html">app token</a> that identifies your application, and each application should have its own unique app token. A limited number of requests can be made without an app token, but they are subject to much lower throttling limits than request that do include one. With an app token, your application is guaranteed access to it's own pool of requests. If you don't have an app token yet, click the button to the right to sign up for one.</p>
+<p>All requests should include an <a href="http://dev.socrata.com/docs/app-tokens.html">app token</a> that identifies your application, and each application should have its own unique app token. A limited number of requests can be made without an app token, but they are subject to much lower throttling limits than request that do include one. With an app token, your application is guaranteed access to it's own pool of requests. If you don't have an app token yet, click the button to the right to sign up for one.</p>
 
-<div class="register"><a href="/register" target="_blank" class="btn btn-primary btn-lg pull-right"> <i class="fa fa-key fa-lg"></i> Sign up for app token!</a></div>
+<div class="register"><a href="http://dev.socrata.com/register" target="_blank" class="btn btn-primary btn-lg pull-right"> <i class="fa fa-key fa-lg"></i> Sign up for app token!</a></div>
 
 <p>Once you have an app token, you can include it with your request either by using the <code>X-App-Token</code> HTTP header, or by passing it via the <code>$$app_token</code> parameter on your URL.</p>
 
 <div class="well">
-  Learn more about <a href="/docs/app-tokens.html">App Tokens &amp; Throttling</a>.
+  Learn more about <a href="http://dev.socrata.com/docs/app-tokens.html">App Tokens &amp; Throttling</a>.
 </div>
 
 <h2>Fields</h2>
 
-<p>Each column in <a href="http://{{domain}}/d/{{metadata.id}}">the dataset</a> is represented by a single <code>field</code> in its SODA API. Using <a href="/docs/filters.html">filters</a> and <a href="/docs/queries.html">SoQL queries</a>, you can search for records, limit your results, and change the way the data is output. For example, you could filter this dataset by its <code>{{metadata.columns.0.fieldName}}</code> field using a query like the following:</p>
+<p>Each column in <a href="http://{{domain}}/d/{{metadata.id}}">the dataset</a> is represented by a single <code>field</code> in its SODA API. Using <a href="http://dev.socrata.com/docs/filters.html">filters</a> and <a href="http://dev.socrata.com/docs/queries.html">SoQL queries</a>, you can search for records, limit your results, and change the way the data is output. For example, you could filter this dataset by its <code>{{metadata.columns.0.fieldName}}</code> field using a query like the following:</p>
 
 {{#metadata.columns.0.filter_url}}
   <a class="tryit" href="{{metadata.columns.0.filter_url}}">{{metadata.columns.0.filter_url}}</a>
 {{/metadata.columns.0.filter_url}}
 
-<p>For richer filtering, you can combine filters together by stacking parameters on your URL or by using <a href="/docs/queries.html">SoQL</a> queries. Learn more about about each of the fields in this dataset by clicking the headers below, or read more about the SODA API using the navigation at the top of the page.</p>
+<p>For richer filtering, you can combine filters together by stacking parameters on your URL or by using <a href="http://dev.socrata.com/docs/queries.html">SoQL</a> queries. Learn more about about each of the fields in this dataset by clicking the headers below, or read more about the SODA API using the navigation at the top of the page.</p>
 
 <div class="well">
   <p>Learn more about:</p>
   <ul>
-    <li><a href="/docs/filters.html">Simple Filters</a></li>
-    <li><a href="/docs/queries.html">SoQL Queries</a></li>
-    <li><a href="/docs/paging.html">Paging Through Data</a></li>
+    <li><a href="http://dev.socrata.com/docs/filters.html">Simple Filters</a></li>
+    <li><a href="http://dev.socrata.com/docs/queries.html">SoQL Queries</a></li>
+    <li><a href="http://dev.socrata.com/docs/paging.html">Paging Through Data</a></li>
   </ul>
 </div>
 
@@ -117,14 +117,14 @@
 
           <h4>Query Options</h4>
 
-          <p>You can also use <a href="/docs/queries.html">SoQL queries</a> with this column. Since it is a <code>{{dataTypeName}}</code> column, the following query options are available:
+          <p>You can also use <a href="http://dev.socrata.com/docs/queries.html">SoQL queries</a> with this column. Since it is a <code>{{dataTypeName}}</code> column, the following query options are available:
           <ul>
             {{#available_functions}}
               <li>{{function_template}}</li>
             {{/available_functions}}
           </ul>
 
-          <p>For more details on what query options you have for this column, see the <a href="/docs/datatypes/{{dataTypeName}}.html">detailed docs on the <code>{{dataTypeName}}</code> datatype</a></p>
+          <p>For more details on what query options you have for this column, see the <a href="http://dev.socrata.com/docs/datatypes/{{dataTypeName}}.html">detailed docs on the <code>{{dataTypeName}}</code> datatype</a></p>
         </div>
       </div>
     </li>
