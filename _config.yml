@@ -1,5 +1,6 @@
 destination: public
-exclude: [Makefile, Gemfile, Gemfile.lock, .rvmrc, public, sample-code]
+exclude: [Makefile, Gemfile, Gemfile.lock, .rvmrc, public, sample-code, vendor]
+# permalink: pretty
 splash: false
 splash_homepage: false
 root: /nasa-dev.socrata.com
@@ -10,12 +11,27 @@ icon: fa fa-code
 github_repo: https://github.com/socrata/nasa-dev.socrata.com
 contribute: /contributing.html
 
+flags:
+  show_migration: true
+  peeper:
+    img: '/img/peeper.png'
+    link: '/support.html'
+    delay: 4000
+
 local_js:
-  - /js/purl.js
-  - /js/try.js
+  - //cdnjs.cloudflare.com/ajax/libs/mustache.js/0.8.1/mustache.min.js
+  - /common/js/purl.js
+  - /common/js/try.js
+  - /js/snuffleupadata.js
   - /js/github.js
+  - /js/external-link.js
+  - /js/js.cookie.js
+  - /js/peeper.js
 
 gems:
   - jekyll-redirect-from
   - jekyll-sitemap
   - jekyll-mentions
+
+# Offline mode plugin
+offline: false

@@ -14,7 +14,7 @@ This guide describes how to use FME Desktop to setup a basic workspace to publis
 Before you begin this tutorial, you should have the following:
 
 - An installed copy of FME Desktop 2015 or 2014 SP4 (Windows, Mac, or Linux)
- - Download [FME 2015 Beta](http://www.safe.com/support/support-resources/fme-downloads/beta/) (recommended) or [FME 2014 SP4](http://www.safe.com/support/support-resources/fme-downloads/)
+ - Download [FME 2015](http://www.safe.com/support/support-resources/fme-downloads/) (recommended) or [FME 2014 SP4](http://www.safe.com/support/support-resources/fme-downloads/)
  - If you are using FME 2013 or FME 2014, we strongly recommend updating to the latest version of FME to make use of the newest Socrata Writer.
 - Socrata account with a Publisher role or Owner rights to at least one *existing* dataset
 
@@ -66,7 +66,15 @@ FME can also create a new Socrata dataset automatically. Simply enter the name y
 Socrata Writer: 'TEMP.csv' was successfully imported as a new Socrata dataset. The dataset ID is 'k5ad-vnv2'
 ```
 
-To have the workflow update the dataset you should set the "Dataset Name" to the dataset ID.
+To have the workflow update the dataset you should set the "Dataset Name" to this dataset ID from the log output.
+
+<div class="well">
+<em>Tip on publishing large datasets</em>:<br> The Socrata Writer may fail when creating datasets if you are loading a relatively large amount of data (60+ MB). If you get this error when creating a new dataset you need to first "seed" the dataset with a smaller number of records:
+<p>The JSON data is incomplete: Unexpectedly encountered the end of JSON data
+Socrata Writer: HTTP 100</p>
+To "seed" a dataset with a smaller number of records, in the Reader you are using you should reduce the Max Features to Read by finding the Reader in the Navigator panel (upper left) and going to Parameters > Features to Read > Max Features to Read. Set the value to something relatively small (5000). Run the workflow to create the dataset then get the resulting dataset ID (from the log as described above), input it as the Dataset Name in the Socrata Writer, set Truncate Dataset First to "Yes", set the Max Features to Read back to blank, and run the workflow again to replace the seeded dataset with the complete set of rows you wish to publish.
+</div>
+
 
 
 ### Step 4: Configure the update method
@@ -113,6 +121,7 @@ In general there are two approaches you can take to schedule an FME Workflow:
 
 - [Getting Started with FME](http://www.safe.com/fme/getting-started/)
 - [FMEpedia](http://fmepedia.safe.com)
+- [FME Training Resources](https://www.safe.com/learning/training/)
 - [FME write-up on Socrata Writer](http://www.safe.com/solutions/for-applications/socrata)
 - [Safe FME Support](http://www.safe.com/support/support-resources/)
 - List of [350+ formats/systems supported by FME](http://www.safe.com/fme/format-search/)
