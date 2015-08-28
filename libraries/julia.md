@@ -1,12 +1,8 @@
 ---
 layout: external-link
 title: Julia
-type: sdk 
-<<<<<<< HEAD
-audience: all
-=======
+type: sdk
 audience: consumer
->>>>>>> upstream/gh-pages
 
 language: Julia
 
